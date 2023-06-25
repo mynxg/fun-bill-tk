@@ -1,0 +1,22 @@
+server:
+  port: 8082
+# 连接池
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fun_bill?useSSL=false
+  thymeleaf:
+    cache: false #关闭thymeleaf缓存
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.nxg.entity #别名扫描
+  mapper-locations: classpath:/mybatis/*.xml
+
+#日志
+logging:
+  level:
+    com.nxg: debug
+
